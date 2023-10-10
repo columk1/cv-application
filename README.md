@@ -1,41 +1,15 @@
-## React + Vite + TailwindCSS template
+# CV Generator
 
-Create your own project based on this template by running:
+## Overview
 
-```bash
-npx degit quavedev/react-vite-tailwindcss-template your-project
-```
+A javascript CV generator built with React and Vite.
 
-## Install
+## Project Notes
 
-```bash
-npm install
-```
+An Assignment from The Odin Project
 
-> You can make sure you are running Node.js 18 with `nvm`. Run `nvm use` to set the Node.js 18 in this project.
+#### Live Link: [CV Generator]()
 
-## Develop
+## Features
 
-```bash
-npm run dev
-```
-
-## Build
-
-```bash
-npm build
-```
-
-Preview:
-
-```bash
-npm run preview
-```
-
-## Deploy on zCloud
-
-Create your account at [zcloud.ws](https://zcloud.ws).
-
-Connect to your GitHub, create your app and done!
-
-Push to Deploy.
+## To Do
