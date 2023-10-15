@@ -10,7 +10,6 @@ h4 {
   width: 75%;
   aspect-ratio: 1 / 1.41;
   margin: 0 auto;
-  padding: 2.5rem 4.5rem;
   background-color: white;
   font-size: 0.65rem;
 }
@@ -20,8 +19,12 @@ h4 {
   display: grid;
   place-items: center;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  padding: 2.5rem 0;
   text-transform: uppercase;
+}
+
+.cv-body {
+  padding: 0 4.5rem;
 }
 
 .name {
