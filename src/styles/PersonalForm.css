@@ -1,0 +1,12 @@
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+
+.section-title {
+  width: 100%;
+  margin: 2rem 0 1rem;
+  font-size: 1.5rem;
+}

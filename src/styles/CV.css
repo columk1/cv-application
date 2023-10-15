@@ -1,0 +1,124 @@
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+
+.resume-container {
+  font-family: 'DM Sans', sans-serif;
+  width: 75%;
+  aspect-ratio: 1 / 1.41;
+  margin: 0 auto;
+  padding: 2.5rem 4.5rem;
+  background-color: white;
+  font-size: 0.65rem;
+}
+
+.cv-header {
+  font-family: 'Oswald', sans-serif;
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.name {
+  font-size: 1.4rem;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.6rem;
+}
+
+.section {
+  margin-bottom: 1rem;
+}
+
+.cv-section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.2rem;
+  margin: 0 auto 0.2rem;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background-color: lightgray;
+  top: 3%;
+  bottom: 0;
+  left: 0;
+  margin-left: 0;
+}
+
+.job {
+  margin: 0 0 0.75rem 0.7rem;
+  position: relative;
+}
+
+.job::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  left: -3.3%;
+  background-color: white;
+  border: 1px solid grey;
+  top: 7px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  color: darkslateblue;
+}
+
+.employer {
+  margin-bottom: 0.15rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.info-group {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  justify-content: space-between;
+  font-size: 0.7rem;
+}
+
+.experience .dates {
+  font-size: 0.7rem;
+}
+
+.dates {
+  margin-bottom: 0.25rem;
+  color: gray;
+}
+
+.description {
+  margin-left: 1.5rem;
+}
+
+li {
+  margin: 0.2rem 0 0;
+}
+
+.h-divider {
+  width: 100%;
+  height: 1px;
+  margin: 0 auto 0.4rem;
+  background-color: grey;
+}
