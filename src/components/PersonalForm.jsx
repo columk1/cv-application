@@ -3,10 +3,10 @@ import '../styles/PersonalForm.css'
 
 export default function PersonalForm({
   onChange,
-  fullName,
+  name,
   email,
   phoneNumber,
-  address,
+  location,
 }) {
   return (
     <section className='personal-form'>
@@ -14,12 +14,12 @@ export default function PersonalForm({
       <div className='inputs'>
         <Input
           type='text'
-          id='full-name'
+          id='name'
           labelText='Full Name'
           placeholder='John Doe'
-          value={fullName}
+          value={name}
           onChange={onChange}
-          data-key='fullName'
+          data-key='name'
         />
         <Input
           type='email'
@@ -32,7 +32,7 @@ export default function PersonalForm({
         />
         <Input
           type='tel'
-          id='phone-number'
+          id='phoneNumber'
           labelText='Phone Number'
           placeholder='+1 123 456 7890'
           value={phoneNumber}
@@ -41,12 +41,12 @@ export default function PersonalForm({
         />
         <Input
           type='text'
-          id='address'
+          id='location'
           labelText='Address'
           placeholder='Florida, USA'
-          value={address}
+          value={location}
           onChange={onChange}
-          data-key='address'
+          data-key='location'
         />
       </div>
     </section>

@@ -2,7 +2,7 @@ export default {
   person: {
     name: 'John Doe',
     email: 'johndoe@gmail.com',
-    phone: '+1 123 456 7890',
+    phoneNumber: '+1 123 456 7890',
     location: 'Florida, USA',
   },
   experience: [
