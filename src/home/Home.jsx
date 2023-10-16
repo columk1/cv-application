@@ -7,20 +7,26 @@ import { useState } from 'react'
 
 export const Home = () => {
   const [person, setPerson] = useState(data.person)
+  const [experience, setExperience] = useState(data.experience)
+  const [education, setEducation] = useState(data.education)
 
-  const handlePersonalInfoChange = (e) => {
+  const handlePersonalChange = (e) => {
     const key = e.target.dataset.key
     setPerson({ ...person, [key]: e.target.value })
   }
+
+  const handleExperienceChange = (e) => {}
+
+  const handleEducuationChange = (e) => {}
 
   // const CVState = () => {
   //   console.log({ ...data, ...person })
   //   return { ...data, ...person }
   // }
 
-  const testObj = () => ({ ...data, person: person })
+  const personObj = () => ({ ...data, person: person })
 
-  console.log(testObj)
+  console.log(personObj())
 
   return (
     <main className='main'>
@@ -29,7 +35,7 @@ export const Home = () => {
           <span className='title'>CV Generator</span>
         </h2>
         <PersonalForm
-          onChange={handlePersonalInfoChange}
+          onChange={handlePersonalChange}
           name={person.name}
           email={person.email}
           phoneNumber={person.phoneNumber}
@@ -39,7 +45,7 @@ export const Home = () => {
         <EducationForm />
       </section>
       <section className='output-container'>
-        <CV data={testObj()} />
+        <CV data={personObj()} />
       </section>
     </main>
   )

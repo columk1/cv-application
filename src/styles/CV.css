@@ -20,6 +20,9 @@ h4 {
   place-items: center;
   gap: 0.5rem;
   padding: 2.5rem 0;
+}
+
+.name {
   text-transform: uppercase;
 }
 

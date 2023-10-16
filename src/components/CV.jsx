@@ -11,7 +11,7 @@ export default function CV({ data }) {
         <h2 className='name'>{person.name}</h2>
         <div className='contact-info'>
           <p>{person.location}</p>
-          <p>{person.phone}</p>
+          <p>{person.phoneNumber}</p>
           <p>{person.email}</p>
         </div>
       </div>
@@ -26,7 +26,6 @@ export default function CV({ data }) {
                   <h4>{job.jobTitle}</h4>
                   <p className='city'>{job.location}</p>
                 </div>
-
                 <p className='employer'>{job.employer}</p>
                 <p className='dates'>
                   {job.startDate} - {job.endDate}
