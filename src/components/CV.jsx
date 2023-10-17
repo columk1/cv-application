@@ -21,7 +21,7 @@ export default function CV({ data }) {
           <div className='h-divider'></div>
           <div className='timeline'>
             {experience.map((job, index) => (
-              <div className='job' key={index}>
+              <div className='timeline-item job' key={index}>
                 <div className='info-group'>
                   <h4>{job.jobTitle}</h4>
                   <p className='city'>{job.location}</p>
@@ -31,7 +31,7 @@ export default function CV({ data }) {
                   {job.startDate} - {job.endDate}
                 </p>
                 <ul className='description'>
-                  {job.description.map((li, i) => (
+                  {job.description.split('. ').map((li, i) => (
                     <li key={i}>{li}</li>
                   ))}
                 </ul>
@@ -42,15 +42,21 @@ export default function CV({ data }) {
         <div className='section education'>
           <h3 className='cv-section-title'>Education</h3>
           <div className='h-divider'></div>
-          {education.map((school, index) => (
-            <div className='school' key={index}>
-              <h4>{school.school}</h4>
-              <p className='degree'>{school.degree}</p>
-              <p className='dates'>
-                {school.startDate} - {school.endDate}
-              </p>
-            </div>
-          ))}
+          <div className='timeline'>
+            {education.map((school, index) => (
+              <div className='timeline-item school' key={index}>
+                <div className='info-group'>
+                  <h4>{school.school}</h4>
+                  <p className='city'>{school.city}</p>
+                </div>
+                <p className='degree'>{school.degree}</p>
+                <p className='dates'>
+                  {school.startDate} - {school.endDate}
+                </p>
+                <p className='description'>{school.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     webfontDownload([
-      'https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=DM+Serif+Display&&family=Oswald:wght@300&display=swap',
+      'https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=DM+Serif+Display&&family=Oswald:wght@300&display=swap',
     ]),
   ],
   test: {

@@ -12,11 +12,8 @@ export default {
       location: 'New York, USA',
       startDate: 'Oct, 2022',
       endDate: 'present',
-      description: [
-        'In the crypto space, industry is globally virtualising its next-generation team players.',
-        'Our smart contract development lifecycle enables long-term, best-in-class products.',
-        'Relayed dot-bombs to intelligently and effectively monetize our unparalleled bandwidth.',
-      ],
+      description:
+        'In the crypto space, industry is globally virtualising its next-generation team players. Our smart contract development lifecycle enables long-term, best-in-class products. Relayed dot-bombs to intelligently and effectively monetize our unparalleled bandwidth.',
     },
     {
       jobTitle: 'Meta Development Developer Engineer',
@@ -24,11 +21,8 @@ export default {
       location: 'Seattle, USA',
       startDate: 'Jan, 2021',
       endDate: 'Feb, 2022',
-      description: [
-        'Used holistic user experiences to globally manage our executive search expectations.',
-        'Unparalleled big datas ethically enable company-wide prince2 practitioners for our synergies.',
-        'Efficiencies will come from conservatively calibrating our intrapreneurs.',
-      ],
+      description:
+        'Used holistic user experiences to globally manage our executive search expectations. Unparalleled big datas ethically enable company-wide prince2 practitioners for our synergies. Efficiencies will come from conservatively calibrating our intrapreneurs.',
     },
   ],
   education: [

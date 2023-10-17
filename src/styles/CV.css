@@ -61,18 +61,18 @@ h4 {
   position: absolute;
   width: 1px;
   background-color: lightgray;
-  top: 3%;
+  top: 0.5rem;
   bottom: 0;
   left: 0;
   margin-left: 0;
 }
 
-.job {
+.timeline-item {
   margin: 0 0 0.75rem 0.7rem;
   position: relative;
 }
 
-.job::before {
+.timeline-item::before {
   content: '';
   position: absolute;
   width: 6px;
@@ -92,8 +92,8 @@ h4 {
 }
 
 .employer {
-  margin-bottom: 0.15rem;
-  font-size: 0.75rem;
+  /* margin-bottom: 0.05rem; */
+  /* font-size: 0.75rem; */
   font-weight: bold;
 }
 
@@ -102,7 +102,7 @@ h4 {
   align-items: baseline;
   gap: 1rem;
   justify-content: space-between;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
 }
 
 .experience .dates {
@@ -114,7 +114,7 @@ h4 {
   color: gray;
 }
 
-.description {
+.experience .description {
   margin-left: 1.5rem;
 }
 
