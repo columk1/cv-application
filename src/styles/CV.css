@@ -37,8 +37,19 @@ h4 {
 .contact-info {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   gap: 1rem;
+  font-size: 0.6rem;
+}
+
+.contact-group {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.symbol {
+  margin-top: 0.1rem;
   font-size: 0.6rem;
 }
 

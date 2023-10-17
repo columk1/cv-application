@@ -10,9 +10,20 @@ export default function CV({ data }) {
       <div className='cv-header'>
         <h2 className='name'>{person.name}</h2>
         <div className='contact-info'>
-          <p>{person.location}</p>
-          <p>{person.phoneNumber}</p>
-          <p>{person.email}</p>
+          <div className='contact-group'>
+            <span className='symbol material-symbols-outlined'>
+              location_on
+            </span>
+            {person.location}
+          </div>
+          <div className='contact-group'>
+            <span class='symbol material-symbols-outlined'>call</span>
+            {person.phoneNumber}
+          </div>
+          <div className='contact-group'>
+            <span class='symbol material-symbols-outlined'>email</span>
+            {person.email}
+          </div>
         </div>
       </div>
       <div className='cv-body'>

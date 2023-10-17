@@ -50,6 +50,11 @@ export const Home = () => {
   // }
 
   const handleAddExperience = () => {}
+  const handleAddEducation = () => {}
+
+  const handleDeleteExperience = (index) => {
+    setExperience(experience.filter((_, i) => i !== index))
+  }
 
   const dataObj = () => ({
     ...data,
@@ -70,12 +75,18 @@ export const Home = () => {
           email={person.email}
           phoneNumber={person.phoneNumber}
           location={person.location}
-          // isCollapsed={true}
         />
         {data.experience.map((job, index) => (
           <ExperienceForm
             key={index}
+            formTitle={`Experience  (${index + 1})`}
             onChange={handleExperienceChange(index)}
+            jobTitle={experience[index].jobTitle}
+            employer={experience[index].employer}
+            startDate={experience[index].startDate}
+            endDate={experience[index].endDate}
+            city={experience[index].city}
+            description={experience[index].description}
           />
         ))}
         <AddSectionButton
@@ -83,8 +94,21 @@ export const Home = () => {
           sectionTitle='Experience'
         />
         {data.education.map((course, index) => (
-          <EducationForm key={index} onChange={handleEducationChange(index)} />
+          <EducationForm
+            key={index}
+            onChange={handleEducationChange(index)}
+            school={education[index].school}
+            degree={education[index].degree}
+            startDate={education[index].startDate}
+            endDate={education[index].endDate}
+            city={education[index].city}
+            description={education[index].description}
+          />
         ))}
+        <AddSectionButton
+          onClick={handleAddEducation}
+          sectionTitle='Education'
+        />
       </section>
       <section className='output-container'>
         <CV data={dataObj()} />
