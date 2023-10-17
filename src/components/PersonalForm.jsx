@@ -1,5 +1,6 @@
 import Input from './Input.jsx'
 import '../styles/PersonalForm.css'
+import { useState } from 'react'
 
 export default function PersonalForm({
   onChange,
@@ -7,10 +8,20 @@ export default function PersonalForm({
   email,
   phoneNumber,
   location,
+  isCollapsed,
 }) {
-  return (
+  const [isActive, setIsActive] = useState(true)
+
+  const toggleActive = () => setIsActive(!isActive)
+
+  return isActive ? (
     <section className='personal-form'>
-      <h2 className='section-title'>Personal Details</h2>
+      <div className='section-header' onClick={toggleActive}>
+        <h2 className='section-title'>Personal Details</h2>
+        <button className='expand-btn' onClick={toggleActive}>
+          <span className='expand material-symbols-outlined'>expand_less</span>
+        </button>
+      </div>
       <div className='inputs'>
         <Input
           type='text'
@@ -48,6 +59,15 @@ export default function PersonalForm({
           onChange={onChange}
           data-key='location'
         />
+      </div>
+    </section>
+  ) : (
+    <section className='personal-form'>
+      <div className='section-header' onClick={toggleActive}>
+        <h2 className='section-title'>Personal Details</h2>
+        <button className='expand-btn' onClick={toggleActive}>
+          <span className='expand material-symbols-outlined'>expand_more</span>
+        </button>
       </div>
     </section>
   )

@@ -61,15 +61,16 @@ export const Home = () => {
   return (
     <main className='main'>
       <section className='input-container'>
-        <h2 className='h2'>
+        <h1 className='h1'>
           <span className='title'>CV Generator</span>
-        </h2>
+        </h1>
         <PersonalForm
           onChange={handlePersonalChange}
           name={person.name}
           email={person.email}
           phoneNumber={person.phoneNumber}
           location={person.location}
+          // isCollapsed={true}
         />
         {data.experience.map((job, index) => (
           <ExperienceForm
