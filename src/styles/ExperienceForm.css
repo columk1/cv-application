@@ -2,16 +2,24 @@
   color: indigo;
 }
 
+/* Style section title when delete button is hovered */
+.form-container:has(+ .deleteBtn:hover) .section-title {
+  color: indigo;
+}
+
 .deleteBtn {
   padding: 0.5rem;
   grid-column: 2;
   grid-row: 1;
   color: transparent;
   cursor: pointer;
-}
 
-.deleteBtn:hover {
-  color: indigo;
+  &:hover {
+    color: indigo;
+  }
+  > span {
+    display: inline-block;
+  }
 }
 
 textarea {

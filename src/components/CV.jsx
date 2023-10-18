@@ -17,11 +17,11 @@ export default function CV({ data }) {
             {person.location}
           </div>
           <div className='contact-group'>
-            <span class='symbol material-symbols-outlined'>call</span>
+            <span className='symbol material-symbols-outlined'>call</span>
             {person.phoneNumber}
           </div>
           <div className='contact-group'>
-            <span class='symbol material-symbols-outlined'>email</span>
+            <span className='symbol material-symbols-outlined'>email</span>
             {person.email}
           </div>
         </div>

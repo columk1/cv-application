@@ -6,6 +6,7 @@ import { useState } from 'react'
 export default function ExperienceForm({
   formTitle,
   onChange,
+  handleDelete,
   jobTitle,
   employer,
   startDate,
@@ -91,7 +92,7 @@ export default function ExperienceForm({
           </div>
         )}
       </div>
-      <div className='deleteBtn'>
+      <div className='deleteBtn' onClick={handleDelete}>
         <span className='deleteSymbol material-symbols-outlined'>delete</span>
       </div>
     </section>

@@ -8,40 +8,30 @@ import { useState } from 'react'
 
 export const Home = () => {
   const [data, setData] = useState(sampleData)
-  const [person, setPerson] = useState(data.person)
-  const [experience, setExperience] = useState(data.experience)
-  const [education, setEducation] = useState(data.education)
+  const person = data.person
+  const experience = data.experience
+  const education = data.education
 
   const handlePersonalChange = (e) => {
     const key = e.target.dataset.key
-    setPerson({ ...person, [key]: e.target.value })
+    const updatedPerson = { ...data.person, [key]: e.target.value }
+    setData({ ...data, person: updatedPerson })
   }
-
-  // const handleExperienceChange = (index) => (e) => {
-  //   const key = e.target.dataset.key
-  //   setExperience([
-  //     ...experience.slice(0, index),
-  //     { ...experience, [key]: e.target.value },
-  //     ...experience.slice(index + 1),
-  //   ])
-  // }
 
   const handleExperienceChange = (index) => (e) => {
     const key = e.target.dataset.key
-    setExperience(
-      experience.map((job, i) =>
-        i === index ? { ...job, [key]: e.target.value } : job,
-      ),
+    let updatedExperience = experience.map((job, i) =>
+      i === index ? { ...job, [key]: e.target.value } : job,
     )
+    setData({ ...data, experience: updatedExperience })
   }
 
   const handleEducationChange = (index) => (e) => {
     const key = e.target.dataset.key
-    setEducation(
-      education.map((course, i) =>
-        i === index ? { ...course, [key]: e.target.value } : course,
-      ),
+    const updatedEducation = education.map((course, i) =>
+      i === index ? { ...course, [key]: e.target.value } : course,
     )
+    setData({ ...data, education: updatedEducation })
   }
 
   // const CVState = () => {
@@ -53,15 +43,8 @@ export const Home = () => {
   const handleAddEducation = () => {}
 
   const handleDeleteExperience = (index) => {
-    setExperience(experience.filter((_, i) => i !== index))
+    setData({ ...data, experience: experience.filter((_, i) => i !== index) })
   }
-
-  const dataObj = () => ({
-    ...data,
-    person: person,
-    experience: experience,
-    education: education,
-  })
 
   return (
     <main className='main'>
@@ -76,11 +59,13 @@ export const Home = () => {
           phoneNumber={person.phoneNumber}
           location={person.location}
         />
+        {console.log(data.experience)}
         {data.experience.map((job, index) => (
           <ExperienceForm
             key={index}
             formTitle={`Experience  (${index + 1})`}
             onChange={handleExperienceChange(index)}
+            handleDelete={() => handleDeleteExperience(index)}
             jobTitle={experience[index].jobTitle}
             employer={experience[index].employer}
             startDate={experience[index].startDate}
@@ -111,7 +96,7 @@ export const Home = () => {
         />
       </section>
       <section className='output-container'>
-        <CV data={dataObj()} />
+        <CV data={data} />
       </section>
     </main>
   )

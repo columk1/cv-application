@@ -1,4 +1,4 @@
-// import '../styles/FormHeader.css'
+import '../styles/FormHeader.css'
 
 export default function FormHeader({ onClick, formTitle, isActive }) {
   return (

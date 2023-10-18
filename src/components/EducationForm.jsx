@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 export default function EducationForm({
   onChange,
+  handleDelete,
   school,
   degree,
   startDate,
@@ -84,9 +85,9 @@ export default function EducationForm({
           </div>
         )}
       </div>
-      <div className='deleteBtn'>
+      <button className='deleteBtn' onClick={handleDelete}>
         <span className='deleteSymbol material-symbols-outlined'>delete</span>
-      </div>
+      </button>
     </section>
   )
 }
