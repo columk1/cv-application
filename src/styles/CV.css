@@ -7,57 +7,64 @@ h4 {
 
 .resume-container {
   font-family: 'DM Sans', sans-serif;
-  width: 75%;
-  aspect-ratio: 1 / 1.41;
-  margin: 0 auto;
+  width: 210mm;
+  height: 297mm;
+  /* aspect-ratio: 1 / 1.41; */
+  margin: 10mm auto;
   background-color: white;
-  font-size: 0.65rem;
+  font-size: 11pt;
+  transform-origin: top center;
+  transform: scale(75%);
+}
+
+.resume {
+  padding: 25mm;
 }
 
 .cv-header {
   font-family: 'Oswald', sans-serif;
   display: grid;
   place-items: center;
-  gap: 0.5rem;
-  padding: 2.5rem 0;
+  gap: 2mm;
+  padding-bottom: 10mm;
 }
 
 .name {
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 18pt;
 }
 
 .cv-body {
-  padding: 0 4.5rem;
+  /* padding: 0 4.5rem; */
 }
 
 .contact-info {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 1rem;
-  font-size: 0.6rem;
+  gap: 4.2mm;
+  font-size: 9pt;
 }
 
 .contact-group {
   display: flex;
   align-items: center;
-  gap: 0.1rem;
+  gap: 0.5mm;
 }
 
 .symbol {
-  margin-top: 0.1rem;
-  font-size: 0.6rem;
+  margin-top: 0.5mm;
+  font-size: 9pt;
 }
 
 .section {
-  margin-bottom: 1rem;
+  margin-bottom: 4.2mm;
 }
 
 .cv-section-title {
   font-family: 'DM Serif Display', serif;
-  font-size: 1.2rem;
-  margin: 0 auto 0.2rem;
+  font-size: 16pt;
+  margin: 0 auto 1mm;
 }
 
 .timeline {
@@ -67,34 +74,34 @@ h4 {
 .timeline::before {
   content: '';
   position: absolute;
-  width: 1px;
+  width: 0.3mm;
   background-color: lightgray;
-  top: 0.5rem;
+  top: 2.1mm;
   bottom: 0;
   left: 0;
   margin-left: 0;
 }
 
 .timeline-item {
-  margin: 0 0 0.75rem 0.7rem;
+  margin: 0 0 3.2mm 3mm;
   position: relative;
 }
 
 .timeline-item::before {
   content: '';
   position: absolute;
-  width: 6px;
-  height: 6px;
-  left: -3.3%;
+  width: 1.5mm;
+  height: 1.5mm;
+  left: -3.6mm;
   background-color: white;
-  border: 1px solid grey;
-  top: 7px;
+  border: 0.3mm solid grey;
+  top: 2.1mm;
   border-radius: 50%;
   z-index: 1;
 }
 
 h4 {
-  font-size: 0.9rem;
+  font-size: 13pt;
   margin-bottom: 0;
   color: darkslateblue;
 }
@@ -108,31 +115,31 @@ h4 {
 .info-group {
   display: flex;
   align-items: baseline;
-  gap: 1rem;
+  gap: 2.2mm;
   justify-content: space-between;
-  font-size: 0.6rem;
+  font-size: 18pt;
 }
 
 .experience .dates {
-  font-size: 0.7rem;
+  font-size: 9pt;
 }
 
 .dates {
-  margin-bottom: 0.25rem;
+  margin-bottom: 1mm;
   color: gray;
 }
 
 .experience .description {
-  margin-left: 1.5rem;
+  margin-left: 6.3mm;
 }
 
 li {
-  margin: 0.2rem 0 0;
+  margin: 0.8mm 0 0;
 }
 
 .h-divider {
   width: 100%;
-  height: 1px;
-  margin: 0 auto 0.4rem;
+  height: 0.03mm;
+  margin: 0 auto 1.7mm;
   background-color: grey;
 }
