@@ -3,6 +3,7 @@ import FormHeader from './FormHeader.jsx'
 import { useState } from 'react'
 
 export default function EducationForm({
+  formTitle,
   onChange,
   handleDelete,
   school,
@@ -13,15 +14,22 @@ export default function EducationForm({
   description,
 }) {
   const [isActive, setIsActive] = useState(true)
+  const [title, setTitle] = useState(school || formTitle)
 
   const toggleActive = () => setIsActive(!isActive)
 
+  const onTitleChange = (e) => {
+    onChange(e)
+    setTitle(e.target.value)
+    e.target.value === '' && setTitle(formTitle)
+  }
+
   return (
-    <section className='form education-form'>
+    <div className='form education-form'>
       <div className='form-container'>
         <FormHeader
           onClick={toggleActive}
-          formTitle='Education'
+          formTitle={title}
           isActive={isActive}
         />
         {isActive && (
@@ -32,7 +40,7 @@ export default function EducationForm({
               labelText='School'
               placeholder='University of California'
               value={school}
-              onChange={onChange}
+              onChange={onTitleChange}
               data-key='school'
             />
             <Input
@@ -88,6 +96,6 @@ export default function EducationForm({
       <button className='deleteBtn' onClick={handleDelete}>
         <span className='deleteSymbol material-symbols-outlined'>delete</span>
       </button>
-    </section>
+    </div>
   )
 }

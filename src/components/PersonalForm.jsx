@@ -1,6 +1,6 @@
+import '../styles/PersonalForm.css'
 import Input from './Input.jsx'
 import FormHeader from './FormHeader.jsx'
-import '../styles/PersonalForm.css'
 import { useState } from 'react'
 
 export default function PersonalForm({
@@ -15,11 +15,11 @@ export default function PersonalForm({
   const toggleActive = () => setIsActive(!isActive)
 
   return (
-    <section className='form personal-form'>
+    <div className='form personal-form'>
       <div className='form-container'>
         <FormHeader
           onClick={toggleActive}
-          formTitle='Personal Details'
+          formTitle='Contact Info'
           isActive={isActive}
         />
         {isActive && (
@@ -63,6 +63,6 @@ export default function PersonalForm({
           </div>
         )}
       </div>
-    </section>
+    </div>
   )
 }

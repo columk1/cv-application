@@ -1,0 +1,26 @@
+.input-container,
+.output-container {
+  width: 50vw;
+  min-height: 100vh;
+  padding: 2rem 3rem;
+}
+
+.output-container {
+  background-color: #dbeafe;
+}
+
+.h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-section {
+  margin-bottom: 1.5rem;
+}
+
+.form-section-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: indigo;
+  margin: 0 auto 0.5rem;
+}

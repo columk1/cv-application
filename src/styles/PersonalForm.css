@@ -1,12 +1,9 @@
-section {
-  margin: 0.3rem 0;
-}
-
 .form {
   display: grid;
   grid-template-columns: 1fr 1rem;
   grid-template-rows: 4rem 1fr;
   align-items: center;
+  margin: 0.3rem 0;
 }
 
 .form-container {
@@ -31,7 +28,7 @@ section {
 .section-title {
   width: 100%;
   margin: 1rem 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .expand {

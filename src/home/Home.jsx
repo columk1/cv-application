@@ -1,3 +1,4 @@
+import '../styles/home.css'
 import sampleData from '../assets/data-model.js'
 import PersonalForm from '../components/PersonalForm'
 import ExperienceForm from '../components/ExperienceForm'
@@ -39,12 +40,15 @@ export const Home = () => {
   //   return { ...data, ...person }
   // }
 
-  const handleAddExperience = () => {}
-  const handleAddEducation = () => {}
+  const handleAddExperience = () =>
+    setData({ ...data, experience: [...experience, {}] })
+  const handleAddEducation = () =>
+    setData({ ...data, education: [...education, {}] })
 
-  const handleDeleteExperience = (index) => {
+  const handleDeleteExperience = (index) =>
     setData({ ...data, experience: experience.filter((_, i) => i !== index) })
-  }
+  const handleDeleteEducation = (index) =>
+    setData({ ...data, education: education.filter((_, i) => i !== index) })
 
   return (
     <main className='main'>
@@ -52,48 +56,59 @@ export const Home = () => {
         <h1 className='h1'>
           <span className='title'>CV Generator</span>
         </h1>
-        <PersonalForm
-          onChange={handlePersonalChange}
-          name={person.name}
-          email={person.email}
-          phoneNumber={person.phoneNumber}
-          location={person.location}
-        />
-        {console.log(data.experience)}
-        {data.experience.map((job, index) => (
-          <ExperienceForm
-            key={index}
-            formTitle={`Experience  (${index + 1})`}
-            onChange={handleExperienceChange(index)}
-            handleDelete={() => handleDeleteExperience(index)}
-            jobTitle={experience[index].jobTitle}
-            employer={experience[index].employer}
-            startDate={experience[index].startDate}
-            endDate={experience[index].endDate}
-            city={experience[index].city}
-            description={experience[index].description}
+        <section className='form-section'>
+          <h2 className='form-section-title'>Personal</h2>
+          <PersonalForm
+            onChange={handlePersonalChange}
+            name={person.name}
+            email={person.email}
+            phoneNumber={person.phoneNumber}
+            location={person.location}
           />
-        ))}
-        <AddSectionButton
-          onClick={handleAddExperience}
-          sectionTitle='Experience'
-        />
-        {data.education.map((course, index) => (
-          <EducationForm
-            key={index}
-            onChange={handleEducationChange(index)}
-            school={education[index].school}
-            degree={education[index].degree}
-            startDate={education[index].startDate}
-            endDate={education[index].endDate}
-            city={education[index].city}
-            description={education[index].description}
+        </section>
+        <section className='form-section'>
+          <h2 className='form-section-title'>Experience</h2>
+          {data.experience.map((job, index) => (
+            <ExperienceForm
+              key={index}
+              formTitle={`Experience  (${index + 1})`}
+              onChange={handleExperienceChange(index)}
+              handleDelete={() => handleDeleteExperience(index)}
+              jobTitle={experience[index].jobTitle}
+              employer={experience[index].employer}
+              startDate={experience[index].startDate}
+              endDate={experience[index].endDate}
+              city={experience[index].city}
+              description={experience[index].description}
+            />
+          ))}
+          <AddSectionButton
+            onClick={handleAddExperience}
+            sectionTitle='Experience'
           />
-        ))}
-        <AddSectionButton
-          onClick={handleAddEducation}
-          sectionTitle='Education'
-        />
+        </section>
+        <section className='form-section'>
+          <h2 className='form-section-title'>Education</h2>
+          {data.education.map((course, index) => (
+            <EducationForm
+              key={index}
+              formTitle={`Education (${index + 1})`}
+              onChange={handleEducationChange(index)}
+              handleDelete={() => handleDeleteEducation(index)}
+              handleAdd={handleAddEducation}
+              school={education[index].school}
+              degree={education[index].degree}
+              startDate={education[index].startDate}
+              endDate={education[index].endDate}
+              city={education[index].city}
+              description={education[index].description}
+            />
+          ))}
+          <AddSectionButton
+            onClick={handleAddEducation}
+            sectionTitle='Education'
+          />
+        </section>
       </section>
       <section className='output-container'>
         <CV data={data} />

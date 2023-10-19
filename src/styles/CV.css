@@ -24,14 +24,11 @@ h4 {
 
 .name {
   text-transform: uppercase;
+  font-size: 1.4rem;
 }
 
 .cv-body {
   padding: 0 4.5rem;
-}
-
-.name {
-  font-size: 1.4rem;
 }
 
 .contact-info {

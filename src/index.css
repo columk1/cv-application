@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  /* scrollbar-gutter: stable; */
 }
 *,
 *:before,
@@ -21,17 +22,6 @@ body {
 
 .main {
   display: flex;
-}
-
-.input-container,
-.output-container {
-  width: 50vw;
-  min-height: 100vh;
-  padding: 2rem 3rem;
-}
-
-.output-container {
-  background-color: #dbeafe;
 }
 
 /* Accessibility */

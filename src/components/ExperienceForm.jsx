@@ -1,6 +1,6 @@
+import '../styles/ExperienceForm.css'
 import Input from './Input.jsx'
 import FormHeader from './FormHeader.jsx'
-import '../styles/ExperienceForm.css'
 import { useState } from 'react'
 
 export default function ExperienceForm({
@@ -15,16 +15,17 @@ export default function ExperienceForm({
   description,
 }) {
   const [isActive, setIsActive] = useState(true)
-  const [title, setTitle] = useState(formTitle)
+  const [title, setTitle] = useState(jobTitle || formTitle)
 
   const toggleActive = () => setIsActive(!isActive)
   const onTitleChange = (e) => {
     onChange(e)
     setTitle(e.target.value)
+    e.target.value === '' && setTitle(formTitle)
   }
 
   return (
-    <section className='form experience-form'>
+    <div className='form experience-form'>
       <div className='form-container'>
         <FormHeader
           onClick={toggleActive}
@@ -95,6 +96,6 @@ export default function ExperienceForm({
       <div className='deleteBtn' onClick={handleDelete}>
         <span className='deleteSymbol material-symbols-outlined'>delete</span>
       </div>
-    </section>
+    </div>
   )
 }

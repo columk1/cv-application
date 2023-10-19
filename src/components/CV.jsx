@@ -35,16 +35,18 @@ export default function CV({ data }) {
               <div className='timeline-item job' key={index}>
                 <div className='info-group'>
                   <h4>{job.jobTitle}</h4>
-                  <p className='city'>{job.location}</p>
+                  <p className='city'>{job.city}</p>
                 </div>
                 <p className='employer'>{job.employer}</p>
                 <p className='dates'>
-                  {job.startDate} - {job.endDate}
+                  {job.startDate}
+                  {job.endDate && `- ${job.endDate}`}
                 </p>
                 <ul className='description'>
-                  {job.description.split('. ').map((li, i) => (
-                    <li key={i}>{li}</li>
-                  ))}
+                  {job.description &&
+                    job.description
+                      .split('.')
+                      .map((li, i) => li !== '' && <li key={i}>{li + '.'}</li>)}
                 </ul>
               </div>
             ))}
@@ -62,7 +64,8 @@ export default function CV({ data }) {
                 </div>
                 <p className='degree'>{school.degree}</p>
                 <p className='dates'>
-                  {school.startDate} - {school.endDate}
+                  {school.startDate}
+                  {school.endDate && `- ${school.endDate}`}
                 </p>
                 <p className='description'>{school.description}</p>
               </div>
