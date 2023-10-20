@@ -7,8 +7,22 @@
 
 .output-container {
   display: grid;
+  grid-template-rows: 2rem 1fr;
   justify-content: center;
+  gap: 1rem;
   background-color: #dbeafe;
+}
+
+.btn-group {
+  margin: 0 auto;
+}
+
+.btn-group .btn {
+  background: indigo;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
 
 .h1 {

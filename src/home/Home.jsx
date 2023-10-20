@@ -35,6 +35,17 @@ export const Home = () => {
     setData({ ...data, education: updatedEducation })
   }
 
+  const printCV = () => {
+    let resume = document.querySelector('.resume-container')
+    console.log(resume)
+    let cloned = resume.cloneNode(true)
+    document.body.appendChild(cloned)
+    cloned.classList.add('pdf')
+    cloned.style.transform = 'scale(1)'
+    window.print()
+    document.body.removeChild(cloned)
+  }
+
   // const CVState = () => {
   //   console.log({ ...data, ...person })
   //   return { ...data, ...person }
@@ -111,6 +122,11 @@ export const Home = () => {
         </section>
       </section>
       <section className='output-container'>
+        <div className='btn-group'>
+          <button className='btn' onClick={printCV}>
+            Save as PDF
+          </button>
+        </div>
         <CV data={data} />
       </section>
     </main>
