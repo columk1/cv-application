@@ -8,5 +8,5 @@ button {
 }
 
 button:hover {
-  color: indigo;
+  color: var(--accent);
 }

@@ -24,7 +24,6 @@
 }
 
 .btn-group {
-  /* width: 100%; */
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -36,7 +35,8 @@
   text-align: center;
   font-family: 'Oswald';
   font-weight: 300;
-  color: indigo;
+  font-size: 2.5rem;
+  color: var(--accent);
 }
 
 .form-section {
@@ -48,6 +48,6 @@
   font-weight: 300;
   font-family: 'Oswald';
   font-weight: 300;
-  color: indigo;
+  color: var(--accent);
   margin: 0 auto 0.5rem;
 }

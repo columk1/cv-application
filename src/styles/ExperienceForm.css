@@ -1,10 +1,10 @@
 .form-container:hover + .deleteBtn {
-  color: indigo;
+  color: inherit;
 }
 
 /* Style section title when delete button is hovered */
 .form-container:has(+ .deleteBtn:hover) .section-title {
-  color: indigo;
+  color: var(--accent);
 }
 
 .deleteBtn {
@@ -15,7 +15,7 @@
   cursor: pointer;
 
   &:hover {
-    color: indigo;
+    color: var(--accent);
   }
   > span {
     display: inline-block;

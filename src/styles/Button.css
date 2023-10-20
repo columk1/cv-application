@@ -1,13 +1,13 @@
 .btn {
   margin: 0;
-  background: indigo;
+  background: var(--accent);
   color: white;
   font-size: 0.75rem;
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
 
   &:hover {
-    outline: 1px solid blue;
+    outline: 1px solid #0019fc;
     color: white;
   }
   &:active {

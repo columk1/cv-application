@@ -22,7 +22,7 @@
 
 .section-header:hover .section-title,
 .section-header:hover .expand {
-  color: indigo;
+  color: var(--accent);
 }
 
 .section-title {
