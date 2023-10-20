@@ -25,20 +25,30 @@ export const Home = () => {
     setData({ ...data, person: updatedPerson })
   }
 
-  const handleExperienceChange = (index) => (e) => {
-    const key = e.target.dataset.key
-    let updatedExperience = experience.map((job, i) =>
-      i === index ? { ...job, [key]: e.target.value } : job,
-    )
-    setData({ ...data, experience: updatedExperience })
-  }
+  // const handleExperienceChange = (index) => (e) => {
+  //   const key = e.target.dataset.key
+  //   let updatedExperience = experience.map((job, i) =>
+  //     i === index ? { ...job, [key]: e.target.value } : job,
+  //   )
+  //   setData({ ...data, experience: updatedExperience })
+  // }
 
-  const handleEducationChange = (index) => (e) => {
+  // const handleEducationChange = (index) => (e) => {
+  //   const key = e.target.dataset.key
+  //   const updatedEducation = education.map((course, i) =>
+  //     i === index ? { ...course, [key]: e.target.value } : course,
+  //   )
+  //   setData({ ...data, education: updatedEducation })
+  // }
+
+  const handleSectionChange = (sectionKey, index) => (e) => {
     const key = e.target.dataset.key
-    const updatedEducation = education.map((course, i) =>
-      i === index ? { ...course, [key]: e.target.value } : course,
+    const section = data[sectionKey]
+
+    const updatedSection = section.map((item, i) =>
+      i === index ? { ...item, [key]: e.target.value } : item,
     )
-    setData({ ...data, education: updatedEducation })
+    setData({ ...data, [sectionKey]: updatedSection })
   }
 
   const loadSampleData = () => setData(sampleData)
@@ -86,7 +96,7 @@ export const Home = () => {
             <ExperienceForm
               key={index}
               formTitle={`Experience  (${index + 1})`}
-              onChange={handleExperienceChange(index)}
+              onChange={handleSectionChange('experience', index)}
               handleDelete={() => handleDeleteExperience(index)}
               jobTitle={experience[index].jobTitle}
               employer={experience[index].employer}
@@ -107,7 +117,7 @@ export const Home = () => {
             <EducationForm
               key={index}
               formTitle={`Education (${index + 1})`}
-              onChange={handleEducationChange(index)}
+              onChange={handleSectionChange('education', index)}
               handleDelete={() => handleDeleteEducation(index)}
               handleAdd={handleAddEducation}
               school={education[index].school}
