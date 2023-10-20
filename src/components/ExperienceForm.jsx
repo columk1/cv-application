@@ -39,7 +39,7 @@ export default function ExperienceForm({
               id='job-title'
               labelText='Job Title'
               placeholder='Solutions Architect'
-              value={jobTitle}
+              value={jobTitle || ''}
               onChange={onTitleChange}
               data-key='jobTitle'
             />
@@ -48,7 +48,7 @@ export default function ExperienceForm({
               id='employer'
               labelText='Employer'
               placeholder='Google'
-              value={employer}
+              value={employer || ''}
               onChange={onChange}
               data-key='employer'
             />
@@ -58,8 +58,8 @@ export default function ExperienceForm({
                 id='start-date'
                 labelText='Start Date'
                 placeholder='Oct, 2020'
-                value={startDate}
-                onChange={onChange}
+                value={startDate || ''}
+                onChange={onChange || ''}
                 data-key='startDate'
               />
               <Input
@@ -67,7 +67,7 @@ export default function ExperienceForm({
                 id='end-date'
                 labelText='End Date'
                 placeholder='May, 2022'
-                value={endDate}
+                value={endDate || ''}
                 onChange={onChange}
                 data-key='endDate'
               />
@@ -77,7 +77,7 @@ export default function ExperienceForm({
               id='city'
               labelText='City'
               placeholder='New York'
-              value={city}
+              value={city || ''}
               onChange={onChange}
               data-key='city'
             />
@@ -86,7 +86,7 @@ export default function ExperienceForm({
               id='description'
               labelText='Description'
               placeholder='Lead the Cloud Native Innovation solution offering core competencies and a suite of value-added offerings. Augmenting the capability space, industry is ethically facilitating its end-to-end capabilities..'
-              value={description}
+              value={description || ''}
               onChange={onChange}
               data-key='description'
             />

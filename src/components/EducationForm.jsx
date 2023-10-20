@@ -39,7 +39,7 @@ export default function EducationForm({
               id='school'
               labelText='School'
               placeholder='University of California'
-              value={school}
+              value={school || ''}
               onChange={onTitleChange}
               data-key='school'
             />
@@ -48,7 +48,7 @@ export default function EducationForm({
               id='degree'
               labelText='Degree'
               placeholder='Bachelor of Science'
-              value={degree}
+              value={degree || ''}
               onChange={onChange}
               data-key='degree'
             />
@@ -58,7 +58,7 @@ export default function EducationForm({
                 id='start-date'
                 labelText='Start Date'
                 placeholder='Oct, 2020'
-                value={startDate}
+                value={startDate || ''}
                 onChange={onChange}
                 data-key='startDate'
               />
@@ -67,7 +67,7 @@ export default function EducationForm({
                 id='end-date'
                 labelText='End Date'
                 placeholder='May, 2022'
-                value={endDate}
+                value={endDate || ''}
                 onChange={onChange}
                 data-key='endDate'
               />
@@ -77,7 +77,7 @@ export default function EducationForm({
               id='city'
               labelText='City'
               placeholder='Berkely, CA'
-              value={city}
+              value={city || ''}
               onChange={onChange}
               data-key='city'
             />
@@ -86,7 +86,7 @@ export default function EducationForm({
               id='description'
               labelText='Description'
               placeholder='e.g. Graduated with High Honors.'
-              value={description}
+              value={description || ''}
               onChange={onChange}
               data-key='description'
             />
