@@ -13,8 +13,10 @@ export default function CV({ data }) {
     function resize() {
       let containerWidth = inputContainer.offsetWidth
       let contentWidth = resumeContainer.offsetWidth
+      let mobileTablet = window.matchMedia('(max-width: 1200px)')
 
       let newScale = Math.min(containerWidth / contentWidth) - 0.2
+      if (mobileTablet.matches) newScale += 0.1
       if (newScale < 0.7) setScale(newScale)
     }
   })

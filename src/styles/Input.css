@@ -15,19 +15,15 @@ fieldset {
   gap: 1rem;
 }
 
-/* fieldset label {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-} */
-
 fieldset .input-group {
   width: 50%;
+}
+
+.input-group,
+fieldset {
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 input,

@@ -1,15 +1,25 @@
+.main {
+  display: flex;
+  @media only screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+}
+
 .input-container,
 .output-container {
   width: 50%;
   min-height: 100vh;
   padding: 2rem 3rem;
+  @media only screen and (max-width: 1200px) {
+    width: 100%;
+  }
 }
 
 .output-container {
   display: grid;
   grid-template-rows: 2rem 1fr;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.2rem;
   background-color: #dbeafe;
 }
 
