@@ -1,11 +1,13 @@
 .input-container,
 .output-container {
-  width: 50vw;
+  width: 50%;
   min-height: 100vh;
   padding: 2rem 3rem;
 }
 
 .output-container {
+  display: grid;
+  justify-content: center;
   background-color: #dbeafe;
 }
 

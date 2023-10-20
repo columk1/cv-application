@@ -1,12 +1,30 @@
 import '../styles/CV.css'
+import { useState, useEffect } from 'react'
 
 export default function CV({ data }) {
+  const [scale, setScale] = useState('0.7')
+
+  useEffect(() => {
+    const inputContainer = document.querySelector('.input-container')
+    const resumeContainer = document.querySelector('.resume-container')
+
+    window.addEventListener('resize', resize)
+    resize()
+    function resize() {
+      let containerWidth = inputContainer.offsetWidth
+      let contentWidth = resumeContainer.offsetWidth
+
+      let newScale = Math.min(containerWidth / contentWidth) - 0.2
+      if (newScale < 0.7) setScale(newScale)
+    }
+  })
+
   const person = data.person
   const experience = data.experience
   const education = data.education
 
   return (
-    <div className='resume-container'>
+    <div className='resume-container' style={{ transform: `scale(${scale})` }}>
       <div className='resume'>
         <div className='cv-header'>
           <h2 className='name'>{person.name}</h2>
