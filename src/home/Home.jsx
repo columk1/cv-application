@@ -5,10 +5,16 @@ import ExperienceForm from '../components/ExperienceForm'
 import EducationForm from '../components/EducationForm'
 import AddSectionButton from '../components/AddSectionButton'
 import CV from '../components/CV'
+import Button from '../components/Button'
 import { useState } from 'react'
 
+const startData = {
+  person: { name: '', location: '', phoneNumber: '', email: '' },
+  experience: [],
+  education: [],
+}
 export const Home = () => {
-  const [data, setData] = useState(sampleData)
+  const [data, setData] = useState(startData)
   const person = data.person
   const experience = data.experience
   const education = data.education
@@ -35,9 +41,11 @@ export const Home = () => {
     setData({ ...data, education: updatedEducation })
   }
 
+  const loadSampleData = () => setData(sampleData)
+  const clearData = () => setData(startData)
+
   const printCV = () => {
     let resume = document.querySelector('.resume-container')
-    console.log(resume)
     let cloned = resume.cloneNode(true)
     document.body.appendChild(cloned)
     cloned.classList.add('pdf')
@@ -45,11 +53,6 @@ export const Home = () => {
     window.print()
     document.body.removeChild(cloned)
   }
-
-  // const CVState = () => {
-  //   console.log({ ...data, ...person })
-  //   return { ...data, ...person }
-  // }
 
   const handleAddExperience = () =>
     setData({ ...data, experience: [...experience, {}] })
@@ -123,9 +126,9 @@ export const Home = () => {
       </section>
       <section className='output-container'>
         <div className='btn-group'>
-          <button className='btn' onClick={printCV}>
-            Save as PDF
-          </button>
+          <Button onClick={loadSampleData}>Load Sample Data</Button>
+          <Button onClick={clearData}>Clear Data</Button>
+          <Button onClick={printCV}>Save as PDF</Button>
         </div>
         <CV data={data} />
       </section>

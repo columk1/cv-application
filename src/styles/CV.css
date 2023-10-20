@@ -149,3 +149,12 @@ li {
   margin: 0 auto 1.7mm;
   background-color: grey;
 }
+
+@media print {
+  body *:not(.pdf, .pdf *) {
+    display: none;
+  }
+  .resume-container {
+    transform: scale(1);
+  }
+}
