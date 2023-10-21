@@ -4,8 +4,8 @@ export default function FormHeader({
   onClick,
   formTitle,
   isActive,
-  isEditable,
-  onChange,
+  // isEditable,
+  // onChange,
 }) {
   return (
     <div className='section-header' onClick={onClick}>

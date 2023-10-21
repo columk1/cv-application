@@ -28,10 +28,11 @@ export default function CustomForm({
               type='textarea'
               id='description'
               labelText='Description'
-              placeholder='Scuba Diving'
+              placeholder='e.g. Crochet, Python, Bonzai and Javascript.'
               value={description || ''}
               onChange={onChange}
               data-key='description'
+              autofocus={true}
             />
           </div>
         )}

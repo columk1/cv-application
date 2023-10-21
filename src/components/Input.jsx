@@ -6,6 +6,7 @@ export default function Input({
   labelText,
   onChange,
   value,
+  autofocus,
   'data-key': dataKey,
 }) {
   return (
@@ -21,6 +22,7 @@ export default function Input({
           onChange={onChange}
           value={value}
           data-key={dataKey}
+          autoFocus={autofocus}
         />
       ) : (
         <input
@@ -30,6 +32,7 @@ export default function Input({
           onChange={onChange}
           value={value}
           data-key={dataKey}
+          autoFocus={autofocus}
         />
       )}
     </div>

@@ -42,12 +42,13 @@ export default function EducationForm({
               value={school || ''}
               onChange={onTitleChange}
               data-key='school'
+              autofocus={true}
             />
             <Input
               type='text'
               id='degree'
               labelText='Degree'
-              placeholder='Bachelor of Science'
+              placeholder='BSc, Computer Science'
               value={degree || ''}
               onChange={onChange}
               data-key='degree'

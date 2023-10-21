@@ -11,11 +11,11 @@ export default function AddSectionButton({ onClick, sectionTitle }) {
 
   return (
     <form onSubmit={(e) => e.preventDefault()} className='add-custom-section'>
-      <label htmlFor='custom-section-title'>Section Title</label>
+      <label htmlFor='custom-section-title'>Add your own section title</label>
       <input
         type='text'
         id='custom-section-title'
-        placeholder='e.g. Skills'
+        placeholder='e.g. Technical Skills'
         value={title || ''}
         onChange={(e) => setTitle(e.target.value)}
       />

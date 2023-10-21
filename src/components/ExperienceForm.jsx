@@ -42,6 +42,7 @@ export default function ExperienceForm({
               value={jobTitle || ''}
               onChange={onTitleChange}
               data-key='jobTitle'
+              autofocus={true}
             />
             <Input
               type='text'
@@ -57,7 +58,7 @@ export default function ExperienceForm({
                 type='text'
                 id='start-date'
                 labelText='Start Date'
-                placeholder='Oct, 2020'
+                placeholder='Oct, 2022'
                 value={startDate || ''}
                 onChange={onChange || ''}
                 data-key='startDate'
@@ -66,7 +67,7 @@ export default function ExperienceForm({
                 type='text'
                 id='end-date'
                 labelText='End Date'
-                placeholder='May, 2022'
+                placeholder='Nov, 2023'
                 value={endDate || ''}
                 onChange={onChange}
                 data-key='endDate'
@@ -76,7 +77,7 @@ export default function ExperienceForm({
               type='text'
               id='city'
               labelText='City'
-              placeholder='New York'
+              placeholder='Vancouver, BC'
               value={city || ''}
               onChange={onChange}
               data-key='city'

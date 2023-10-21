@@ -1,36 +1,45 @@
 export default {
   person: {
-    name: 'John Doe',
-    email: 'johndoe@gmail.com',
-    phoneNumber: '+1 123 456 7890',
+    name: 'Washington Irving',
+    email: 'washingtonirving@gmail.com',
+    phoneNumber: '+1 864 456 0963',
     location: 'Florida, USA',
   },
   experience: [
     {
-      jobTitle: 'Senior Software Engineer',
+      jobTitle: 'Robot Liason Officer',
       employer: 'Google',
-      location: 'New York, USA',
+      location: 'Mountain View, CA',
       startDate: 'Oct, 2022',
       endDate: 'present',
       description:
-        'In the crypto space, industry is globally virtualising its next-generation team players. Our smart contract development lifecycle enables long-term, best-in-class products. Relayed dot-bombs to intelligently and effectively monetize our unparalleled bandwidth.',
+        'Globally virtualised the next-generation team players in the crypto-space. Integrated our smart contract development lifecycle with generative AI. Relayed dot-bombs to intelligently and effectively monetize our unparalleled bandwidth.',
     },
     {
-      jobTitle: 'Meta Development Developer Engineer',
+      jobTitle: 'Data Detective',
       employer: 'Microsoft',
-      location: 'Seattle, USA',
+      location: 'Seattle, WA',
       startDate: 'Jan, 2021',
-      endDate: 'Feb, 2022',
+      endDate: 'Oct, 2022',
       description:
-        'Used holistic user experiences to globally manage our executive search expectations. Unparalleled big datas ethically enable company-wide prince2 practitioners for our synergies. Efficiencies will come from conservatively calibrating our intrapreneurs.',
+        'Used holistic user experiences to globally manage our executive search expectations. Unparalleled big data to ethically enable company-wide prince2 practitioners. Systematized efficiencies from conservatively calibrating our intrapreneurs.',
+    },
+    {
+      jobTitle: 'Meta Innovation Sherpa',
+      employer: 'Laundry.ai',
+      location: 'London, UK',
+      startDate: 'Sep, 2019',
+      endDate: 'Jan, 2021',
+      description:
+        'Lead the Cloud Native Innovation solution offering core competencies and a suite of value-added offerings. Augmented the capability space, ethically facilitating its end-to-end capabilities. Lubricated synergies for all stakeholders.',
     },
   ],
   education: [
     {
       school: 'University of California, Berkeley',
-      degree: 'Bachelor of Science',
-      startDate: 'Oct, 2020',
-      endDate: 'May, 2022',
+      degree: 'BSc, Computer Science',
+      startDate: 'Oct, 2015',
+      endDate: 'May, 2019',
     },
   ],
   skills: {

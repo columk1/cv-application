@@ -28,16 +28,17 @@ export default function PersonalForm({
               type='text'
               id='name'
               labelText='Full Name'
-              placeholder='John Doe'
+              placeholder='Washington Irving'
               value={name}
               onChange={onChange}
+              autofocus={true}
               data-key='name'
             />
             <Input
               type='email'
               id='email'
               labelText='Email'
-              placeholder='johndoe@gmail.com'
+              placeholder='washingtonirving@gmail.com'
               value={email}
               onChange={onChange}
               data-key='email'
@@ -46,7 +47,7 @@ export default function PersonalForm({
               type='tel'
               id='phoneNumber'
               labelText='Phone Number'
-              placeholder='+1 123 456 7890'
+              placeholder='+1 864 456 0963'
               value={phoneNumber}
               onChange={onChange}
               data-key='phoneNumber'

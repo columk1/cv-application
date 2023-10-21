@@ -1,6 +1,6 @@
 import './styles/variables.css'
 import './styles/App.css'
-import { Loading } from './components/Loading.jsx'
+// import { Loading } from './components/Loading.jsx'
 import sampleData from './assets/data-model.js'
 import PersonalForm from './components/PersonalForm'
 import ExperienceForm from './components/ExperienceForm'
