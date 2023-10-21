@@ -31,13 +31,6 @@
   padding: 2rem 3rem;
 }
 
-.btn-group {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  gap: 1rem;
-}
-
 .h1 {
   margin-bottom: 1.5rem;
   padding: 0.5rem;
@@ -46,7 +39,8 @@
   font-weight: 300;
   font-size: 2rem;
   color: white;
-  background-color: var(--accent-dark);
+  /* background-color: var(--accent-dark); */
+  background: linear-gradient(45deg, var(--accent-light), var(--accent-dark));
 }
 
 .form-section {
@@ -60,4 +54,11 @@
   font-weight: 300;
   color: var(--accent);
   margin: 0 auto 0.5rem;
+}
+
+.btn-group {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
 }
