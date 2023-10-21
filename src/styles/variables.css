@@ -1,7 +1,7 @@
 :root {
   --main-bg: #f2f5fd;
   --secondary-bg: #e9ebf9;
-
   --accent: #5c15d8;
-  --accent-light: #7339d8;
+  --accent-light: #5b39d8;
+  --accent-dark: #47348e;
 }

@@ -1,7 +1,7 @@
 .btn {
   min-width: 7rem;
   margin: 0;
-  background: var(--accent-light);
+  background: var(--accent-dark);
   color: white;
   font-size: 0.75rem;
   padding: 0.6rem 1rem;

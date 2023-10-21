@@ -51,8 +51,9 @@ textarea {
   padding: 0.6rem;
 }
 
+input:focus,
 textarea:focus {
-  outline: 1px solid indigo;
+  outline: 1px solid var(--accent-light);
 }
 
 label,
@@ -69,10 +70,6 @@ label {
 
 ::placeholder {
   color: lightslategray;
-}
-
-input:focus {
-  outline: 1px solid indigo;
 }
 
 /* **** */

@@ -7,8 +7,12 @@
 }
 
 .form-container {
-  border: 1px solid lightgray;
   grid-row: 1 / 3;
+  border: 1px solid #c4ceeb;
+  border-radius: 0.3rem;
+  &:hover {
+    border: 1px solid var(--accent-light);
+  }
 }
 
 .section-header {
