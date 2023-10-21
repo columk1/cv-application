@@ -28,10 +28,11 @@ fieldset {
 
 input,
 textarea {
-  font-size: 1rem;
   width: 100%;
   padding: 0.6rem;
   /* padding-right: 26px; */
+  font-size: 1rem;
+  color: #222;
   border: 1px solid rgb(214, 226, 240);
   border-radius: 5px;
 }

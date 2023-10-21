@@ -1,3 +1,7 @@
 :root {
-  --accent: #7215d8;
+  --main-bg: #f2f5fd;
+  --secondary-bg: #e9ebf9;
+
+  --accent: #5c15d8;
+  --accent-light: #7339d8;
 }

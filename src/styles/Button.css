@@ -1,13 +1,14 @@
 .btn {
+  min-width: 7rem;
   margin: 0;
-  background: var(--accent);
+  background: var(--accent-light);
   color: white;
   font-size: 0.75rem;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   border-radius: 0.3rem;
 
   &:hover {
-    outline: 1px solid #0019fc;
+    outline: 1px solid rgb(0, 0, 255);
     color: white;
   }
   &:active {

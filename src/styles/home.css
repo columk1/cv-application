@@ -15,12 +15,16 @@
   }
 }
 
+.input-container {
+  color: #222;
+}
+
 .output-container {
   display: grid;
-  grid-template-rows: 2rem 1fr;
+  grid-template-rows: min-content 1fr;
   justify-content: center;
   gap: 1.2rem;
-  background-color: #dbeafe;
+  background-color: var(--secondary-bg);
 }
 
 .btn-group {
@@ -36,7 +40,7 @@
   font-family: 'Oswald';
   font-weight: 300;
   font-size: 2.5rem;
-  color: var(--accent);
+  color: #333;
 }
 
 .form-section {
