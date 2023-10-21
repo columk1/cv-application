@@ -1,0 +1,7 @@
+.add-custom-section {
+  width: 16rem;
+  margin-top: 1rem;
+  input {
+    margin-bottom: 0.1rem;
+  }
+}

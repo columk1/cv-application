@@ -39,4 +39,5 @@ export default {
     other: 'Data Structures and Algorithms, Testing, UX Design',
   },
   links: ['https://github.com/johndoe', 'https://linkedin.com/in/johndoe'],
+  customSection: [],
 }

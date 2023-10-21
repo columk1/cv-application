@@ -36,10 +36,6 @@ h4 {
   font-size: 18pt;
 }
 
-.cv-body {
-  /* padding: 0 4.5rem; */
-}
-
 .contact-info {
   display: flex;
   justify-content: space-between;
@@ -137,6 +133,12 @@ h4 {
 
 .experience .description {
   margin-left: 6.3mm;
+}
+
+.custom ul {
+  margin: 0 9.1mm;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 li {

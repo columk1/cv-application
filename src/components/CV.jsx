@@ -103,6 +103,22 @@ export default function CV({ data }) {
               </div>
             </div>
           )}
+          {data.customSection.length > 0 && (
+            <div className='section custom'>
+              {data.customSection.map((section, index) => (
+                <div className='section custom' key={index}>
+                  <h3 className='cv-section-title'>{section.title}</h3>
+                  <div className='h-divider'></div>
+                  <ul className='description'>
+                    {section.description &&
+                      section.description
+                        .split('.')
+                        .map((li, i) => li !== '' && <li key={i}>{li}</li>)}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

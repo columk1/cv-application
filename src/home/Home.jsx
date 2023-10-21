@@ -3,7 +3,9 @@ import sampleData from '../assets/data-model.js'
 import PersonalForm from '../components/PersonalForm'
 import ExperienceForm from '../components/ExperienceForm'
 import EducationForm from '../components/EducationForm'
+import CustomForm from '../components/CustomForm'
 import AddSectionButton from '../components/AddSectionButton'
+import AddCustomSectionButton from '../components/AddCustomSectionButton'
 import CV from '../components/CV'
 import Button from '../components/Button'
 import { useState } from 'react'
@@ -12,34 +14,20 @@ const startData = {
   person: { name: '', location: '', phoneNumber: '', email: '' },
   experience: [],
   education: [],
+  customSection: [],
 }
 export const Home = () => {
   const [data, setData] = useState(startData)
   const person = data.person
   const experience = data.experience
   const education = data.education
+  const customSection = data.customSection
 
   const handlePersonalChange = (e) => {
     const key = e.target.dataset.key
     const updatedPerson = { ...data.person, [key]: e.target.value }
     setData({ ...data, person: updatedPerson })
   }
-
-  // const handleExperienceChange = (index) => (e) => {
-  //   const key = e.target.dataset.key
-  //   let updatedExperience = experience.map((job, i) =>
-  //     i === index ? { ...job, [key]: e.target.value } : job,
-  //   )
-  //   setData({ ...data, experience: updatedExperience })
-  // }
-
-  // const handleEducationChange = (index) => (e) => {
-  //   const key = e.target.dataset.key
-  //   const updatedEducation = education.map((course, i) =>
-  //     i === index ? { ...course, [key]: e.target.value } : course,
-  //   )
-  //   setData({ ...data, education: updatedEducation })
-  // }
 
   const handleSectionChange = (sectionKey, index) => (e) => {
     const key = e.target.dataset.key
@@ -51,9 +39,23 @@ export const Home = () => {
     setData({ ...data, [sectionKey]: updatedSection })
   }
 
-  const loadSampleData = () => setData(sampleData)
+  // const loadSampleData = () => setData(sampleData)
+
+  const loadSampleData = () => {
+    setData(sampleData)
+    contractSections()
+  }
   const clearData = () => setData(startData)
 
+  // Contract each section (except for Personal Details)
+  const contractSections = () => {
+    setTimeout(() => {
+      let expandBtns = document.querySelectorAll('.expand-btn')
+      expandBtns.forEach((e, index) => (index > 0 ? e.click() : e))
+    }, 10)
+  }
+
+  // Print / Save as PDF
   const printCV = () => {
     let resume = document.querySelector('.resume-container')
     let cloned = resume.cloneNode(true)
@@ -68,11 +70,18 @@ export const Home = () => {
     setData({ ...data, experience: [...experience, {}] })
   const handleAddEducation = () =>
     setData({ ...data, education: [...education, {}] })
+  const handleAddCustomSection = (title) =>
+    setData({ ...data, customSection: [...customSection, { title: title }] })
 
   const handleDeleteExperience = (index) =>
     setData({ ...data, experience: experience.filter((_, i) => i !== index) })
   const handleDeleteEducation = (index) =>
     setData({ ...data, education: education.filter((_, i) => i !== index) })
+  const handleDeleteCustomSection = (index) =>
+    setData({
+      ...data,
+      customSection: customSection.filter((_, i) => i !== index),
+    })
 
   return (
     <main className='main'>
@@ -131,6 +140,22 @@ export const Home = () => {
           <AddSectionButton
             onClick={handleAddEducation}
             sectionTitle='Education'
+          />
+        </section>
+        <section className='form-section'>
+          <h2 className='form-section-title'>Custom</h2>
+          {data.customSection.map((section, index) => (
+            <CustomForm
+              key={index}
+              formTitle={section.title || `Custom Section (${index + 1})`}
+              onChange={handleSectionChange('customSection', index)}
+              handleDelete={() => handleDeleteCustomSection(index)}
+              description={customSection[index].description}
+            />
+          ))}
+          <AddCustomSectionButton
+            onClick={handleAddCustomSection}
+            sectionTitle='Custom Section'
           />
         </section>
       </section>
