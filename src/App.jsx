@@ -10,6 +10,7 @@ import AddSectionButton from './components/AddSectionButton'
 import AddCustomSectionButton from './components/AddCustomSectionButton'
 import CV from './components/CV'
 import Button from './components/Button'
+import Footer from './components/Footer'
 import { useState } from 'react'
 
 const startData = {
@@ -86,89 +87,94 @@ export const App = () => {
     })
 
   return (
-    <main className='main'>
-      <section className='input-container'>
-        <h1 className='h1'>
-          <span className='title'>CV Generator</span>
-        </h1>
-        <section className='form-section'>
-          <h2 className='form-section-title'>Personal</h2>
-          <PersonalForm
-            onChange={handlePersonalChange}
-            name={person.name}
-            email={person.email}
-            phoneNumber={person.phoneNumber}
-            location={person.location}
-          />
+    <div className='app-container'>
+      <main className='main'>
+        <section className='input-container'>
+          <h1 className='h1'>
+            <span className='title'>CV Generator</span>
+          </h1>
+          <div className='input-content'>
+            <section className='form-section'>
+              <h2 className='form-section-title'>Personal</h2>
+              <PersonalForm
+                onChange={handlePersonalChange}
+                name={person.name}
+                email={person.email}
+                phoneNumber={person.phoneNumber}
+                location={person.location}
+              />
+            </section>
+            <section className='form-section'>
+              <h2 className='form-section-title'>Experience</h2>
+              {data.experience.map((job, index) => (
+                <ExperienceForm
+                  key={index}
+                  formTitle={`Experience  (${index + 1})`}
+                  onChange={handleSectionChange('experience', index)}
+                  handleDelete={() => handleDeleteExperience(index)}
+                  jobTitle={experience[index].jobTitle}
+                  employer={experience[index].employer}
+                  startDate={experience[index].startDate}
+                  endDate={experience[index].endDate}
+                  city={experience[index].city}
+                  description={experience[index].description}
+                />
+              ))}
+              <AddSectionButton
+                onClick={handleAddExperience}
+                sectionTitle='Experience'
+              />
+            </section>
+            <section className='form-section'>
+              <h2 className='form-section-title'>Education</h2>
+              {data.education.map((course, index) => (
+                <EducationForm
+                  key={index}
+                  formTitle={`Education (${index + 1})`}
+                  onChange={handleSectionChange('education', index)}
+                  handleDelete={() => handleDeleteEducation(index)}
+                  handleAdd={handleAddEducation}
+                  school={education[index].school}
+                  degree={education[index].degree}
+                  startDate={education[index].startDate}
+                  endDate={education[index].endDate}
+                  city={education[index].city}
+                  description={education[index].description}
+                />
+              ))}
+              <AddSectionButton
+                onClick={handleAddEducation}
+                sectionTitle='Education'
+              />
+            </section>
+            <section className='form-section'>
+              <h2 className='form-section-title'>Custom</h2>
+              {data.customSection.map((section, index) => (
+                <CustomForm
+                  key={index}
+                  formTitle={section.title || `Custom Section (${index + 1})`}
+                  onChange={handleSectionChange('customSection', index)}
+                  handleDelete={() => handleDeleteCustomSection(index)}
+                  description={customSection[index].description}
+                />
+              ))}
+              <AddCustomSectionButton
+                onClick={handleAddCustomSection}
+                sectionTitle='Custom Section'
+              />
+            </section>
+          </div>
         </section>
-        <section className='form-section'>
-          <h2 className='form-section-title'>Experience</h2>
-          {data.experience.map((job, index) => (
-            <ExperienceForm
-              key={index}
-              formTitle={`Experience  (${index + 1})`}
-              onChange={handleSectionChange('experience', index)}
-              handleDelete={() => handleDeleteExperience(index)}
-              jobTitle={experience[index].jobTitle}
-              employer={experience[index].employer}
-              startDate={experience[index].startDate}
-              endDate={experience[index].endDate}
-              city={experience[index].city}
-              description={experience[index].description}
-            />
-          ))}
-          <AddSectionButton
-            onClick={handleAddExperience}
-            sectionTitle='Experience'
-          />
+        <section className='output-container'>
+          <div className='btn-group'>
+            <Button onClick={loadSampleData}>Load Sample Data</Button>
+            <Button onClick={clearData}>Clear Data</Button>
+            <Button onClick={printCV}>Save as PDF</Button>
+          </div>
+          <CV data={data} />
         </section>
-        <section className='form-section'>
-          <h2 className='form-section-title'>Education</h2>
-          {data.education.map((course, index) => (
-            <EducationForm
-              key={index}
-              formTitle={`Education (${index + 1})`}
-              onChange={handleSectionChange('education', index)}
-              handleDelete={() => handleDeleteEducation(index)}
-              handleAdd={handleAddEducation}
-              school={education[index].school}
-              degree={education[index].degree}
-              startDate={education[index].startDate}
-              endDate={education[index].endDate}
-              city={education[index].city}
-              description={education[index].description}
-            />
-          ))}
-          <AddSectionButton
-            onClick={handleAddEducation}
-            sectionTitle='Education'
-          />
-        </section>
-        <section className='form-section'>
-          <h2 className='form-section-title'>Custom</h2>
-          {data.customSection.map((section, index) => (
-            <CustomForm
-              key={index}
-              formTitle={section.title || `Custom Section (${index + 1})`}
-              onChange={handleSectionChange('customSection', index)}
-              handleDelete={() => handleDeleteCustomSection(index)}
-              description={customSection[index].description}
-            />
-          ))}
-          <AddCustomSectionButton
-            onClick={handleAddCustomSection}
-            sectionTitle='Custom Section'
-          />
-        </section>
-      </section>
-      <section className='output-container'>
-        <div className='btn-group'>
-          <Button onClick={loadSampleData}>Load Sample Data</Button>
-          <Button onClick={clearData}>Clear Data</Button>
-          <Button onClick={printCV}>Save as PDF</Button>
-        </div>
-        <CV data={data} />
-      </section>
-    </main>
+      </main>
+      <Footer></Footer>
+    </div>
   )
 }
