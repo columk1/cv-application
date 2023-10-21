@@ -16,6 +16,8 @@ h4 {
   transform-origin: top center;
   transform: scale(0.75);
   box-shadow: 5px 5px 15px 0px rgb(0 0 0 / 15%);
+  /* crude method to remove whitespace created by transform scale */
+  margin-bottom: -300px;
 }
 
 .resume {
