@@ -28,7 +28,7 @@ export default function PersonalForm({
               type='text'
               id='name'
               labelText='Full Name'
-              placeholder='Washington Irving'
+              placeholder='Jane Doe'
               value={name}
               onChange={onChange}
               autofocus={true}
@@ -38,7 +38,7 @@ export default function PersonalForm({
               type='email'
               id='email'
               labelText='Email'
-              placeholder='washingtonirving@gmail.com'
+              placeholder='janedoe@gmail.com'
               value={email}
               onChange={onChange}
               data-key='email'

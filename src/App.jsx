@@ -109,7 +109,9 @@ export const App = () => {
               {data.experience.map((job, index) => (
                 <ExperienceForm
                   key={index}
-                  formTitle={`Experience  (${index + 1})`}
+                  formTitle={
+                    experience[index].jobTitle || `Experience  (${index + 1})`
+                  }
                   onChange={handleSectionChange('experience', index)}
                   handleDelete={() => handleDeleteExperience(index)}
                   jobTitle={experience[index].jobTitle}

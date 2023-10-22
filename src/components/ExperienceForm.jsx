@@ -16,21 +16,15 @@ export default function ExperienceForm({
   autofocus,
 }) {
   const [isActive, setIsActive] = useState(true)
-  const [title, setTitle] = useState(jobTitle || formTitle)
 
   const toggleActive = () => setIsActive(!isActive)
-  const onTitleChange = (e) => {
-    onChange(e)
-    setTitle(e.target.value)
-    e.target.value === '' && setTitle(formTitle)
-  }
 
   return (
     <div className='form experience-form'>
       <div className='form-container'>
         <FormHeader
           onClick={toggleActive}
-          formTitle={title}
+          formTitle={formTitle}
           isActive={isActive}
         />
         {isActive && (
@@ -41,7 +35,7 @@ export default function ExperienceForm({
               labelText='Job Title'
               placeholder='Solutions Architect'
               value={jobTitle || ''}
-              onChange={onTitleChange}
+              onChange={onChange}
               data-key='jobTitle'
               autoFocus={autofocus}
             />
