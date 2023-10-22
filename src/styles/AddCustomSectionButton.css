@@ -5,3 +5,21 @@
     margin-bottom: 0.1rem;
   }
 }
+
+.add-section-btn {
+  margin-left: 1px;
+  padding: 0.3rem 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+  border-radius: 0.3rem;
+  &:hover {
+    color: var(--accent);
+    outline: 1px solid var(--accent);
+    /* background-color: rgb(10, 0, 15, 0.025); */
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}

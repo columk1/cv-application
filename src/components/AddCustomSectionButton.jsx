@@ -19,11 +19,7 @@ export default function AddSectionButton({ onClick, sectionTitle }) {
         value={title || ''}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <button
-        type='submit'
-        className='add-section-button'
-        onClick={handleClick}
-      >
+      <button type='submit' className='add-section-btn' onClick={handleClick}>
         <span>+</span> Add {sectionTitle}
       </button>
     </form>
