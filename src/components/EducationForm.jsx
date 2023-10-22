@@ -12,6 +12,7 @@ export default function EducationForm({
   endDate,
   city,
   description,
+  autofocus,
 }) {
   const [isActive, setIsActive] = useState(true)
   const [title, setTitle] = useState(school || formTitle)
@@ -42,7 +43,7 @@ export default function EducationForm({
               value={school || ''}
               onChange={onTitleChange}
               data-key='school'
-              autofocus={true}
+              autoFocus={autofocus}
             />
             <Input
               type='text'

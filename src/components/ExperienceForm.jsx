@@ -13,6 +13,7 @@ export default function ExperienceForm({
   endDate,
   city,
   description,
+  autofocus,
 }) {
   const [isActive, setIsActive] = useState(true)
   const [title, setTitle] = useState(jobTitle || formTitle)
@@ -42,7 +43,7 @@ export default function ExperienceForm({
               value={jobTitle || ''}
               onChange={onTitleChange}
               data-key='jobTitle'
-              autofocus={true}
+              autoFocus={autofocus}
             />
             <Input
               type='text'
