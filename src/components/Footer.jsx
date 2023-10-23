@@ -9,7 +9,8 @@ export default function Footer() {
         href='https://github.com/columk1'
         target='_blank'
         rel='noreferrer'
-        alt='github'
+        alt='Github'
+        aria-label='Github'
       >
         {/* <i className='githubIcon'></i> */}
         <FaGithub style={{ color: 'white' }} />

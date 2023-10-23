@@ -33,14 +33,13 @@
 
 .h1 {
   margin-bottom: 1.5rem;
-  padding: 0.5rem 0 0.7rem;
+  padding: 0.4rem 0 0.5rem;
   text-align: center;
   font-family: 'Oswald';
   font-weight: 300;
   font-size: 1.8rem;
   color: white;
   background-color: var(--accent-light);
-  /* background: linear-gradient(135deg, var(--accent) 5%, var(--accent-dark)); */
 }
 
 .form-section {
