@@ -20,6 +20,7 @@ An Assignment from The Odin Project.
 
 ## To Do
 
+- Accessibility
 - Subdivide Components
 - Button to switch from bulleted list to paragraph in textareas
 - Option to fill with pre-written descriptions
